@@ -795,7 +795,7 @@ header .row {
   width: 32px;
   height: 55px;
   top: 30%;
-  left: -40px;
+  left: 0;
   font-size: 0;
   opacity: 0.4;
 }
@@ -808,7 +808,7 @@ header .row {
   width: 32px;
   height: 55px;
   top: 30%;
-  right: -40px;
+  right: 0;
   font-size: 0;
   opacity: 0.4;
 }
@@ -822,8 +822,8 @@ header .row {
   display: none;
 }
 .reviews .bx-wrapper,
-.reviews .bx-viewort {
-  min-width: 1180px;
+.reviews .bx-viewport {
+  min-width: 1160px;
 }
 .reviews h2 {
   text-align: center;
@@ -904,6 +904,9 @@ footer a {
   color: #ff7479;
 }
 @media screen and (max-width: 1180px) {
+  .reviews {
+    overflow: hidden;
+  }
   .reviews .bx-prev {
     left: 30px;
   }
