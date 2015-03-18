@@ -461,6 +461,7 @@ h2 {
 }
 header {
   background-image: url(../images/pattern-background.png);
+  min-width: 1180px;
 }
 header .row {
   font-size: 0;
@@ -549,6 +550,7 @@ header .row {
   background-size: cover;
   color: #fff;
   padding-top: 35px;
+  min-width: 1180px;
 }
 .top-slide row {
   padding-top: 120px;
@@ -651,6 +653,7 @@ header .row {
   text-align: center;
   padding-top: 70px;
   padding-bottom: 100px;
+  min-width: 1180px;
 }
 .advantages p,
 .our-clients p {
@@ -660,6 +663,7 @@ header .row {
 }
 .our-clients {
   padding-bottom: 40px;
+  min-width: 1180px;
 }
 .our-clients ul {
   text-align: left;
@@ -707,6 +711,9 @@ header .row {
 }
 .our-clients .ship:before {
   background-image: url(../images/icon-ship.png);
+}
+.fast-feedback {
+  min-width: 1180px;
 }
 .fast-feedback__feedback-form {
   padding-top: 10px;
@@ -777,6 +784,7 @@ header .row {
 .reviews {
   padding-top: 70px;
   padding-bottom: 100px;
+  min-width: 1180px;
 }
 .reviews__slide {
   position: relative;
@@ -812,6 +820,10 @@ header .row {
 }
 .reviews .bx-pager {
   display: none;
+}
+.reviews .bx-wrapper,
+.reviews .bx-viewort {
+  min-width: 1180px;
 }
 .reviews h2 {
   text-align: center;
@@ -870,10 +882,12 @@ header .row {
 }
 .map {
   height: 480px;
+  min-width: 1180px;
 }
 footer {
   background-color: #3a3a3a;
   color: #fff;
+  min-width: 1180px;
 }
 footer p,
 footer span {
@@ -888,4 +902,19 @@ footer span {
 }
 footer a {
   color: #ff7479;
+}
+@media screen and (max-width: 1180px) {
+  .reviews .bx-prev {
+    left: 30px;
+  }
+  .reviews .bx-next {
+    right: 30px;
+  }
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .adress-plate {
+    left: 60px;
+  }
 }
