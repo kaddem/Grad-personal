@@ -5,6 +5,7 @@
 *{
   box-sizing: border-box;
 }
+
 h2{
   margin: 0;
   font-size: @h2-size;
@@ -28,6 +29,10 @@ h2{
   outline: none;
   font-family: @font-family, sans-serif;
   text-transform: uppercase;
+
+  &:hover{
+    opacity: 0.9;
+  }
 
   &:active{
     box-shadow: none;
@@ -96,7 +101,6 @@ header{
     & .active{
       background-color: @main-color;
       color: #fff;
-      pointer-events: none;
       cursor: default;
     }
   }
@@ -235,6 +239,9 @@ header{
     margin-right: 10px;
     padding-left: 15px;
     outline: none;
+    &:focus{
+      outline: none !important;
+    }
   }
   & fieldset{
     border: none;
@@ -272,7 +279,7 @@ header{
   & p{
     font-size: @advantage-paragraph-size;
     font-family: @font-family, sans-serif;
-    line-height: @advantage-paragraph-line-height 24px;
+    line-height: @advantage-paragraph-line-height;
   }
 }
 
@@ -409,23 +416,40 @@ header{
   &__slide{
     position: relative;
 
-    & .left-arrow-box{
+    & .bx-prev{
     position: absolute;
     background-image: url(../images/icon-arrow-slider.png);
     width: 32px;
     height: 55px;
     top: 30%;
-    left: -20px;
+    left: -40px;
+    font-size: 0;
+    opacity: 0.4;
+      &:hover{
+        opacity: 1;
+      }
     }
-    & .right-arrow-box{
+    & .bx-next{
     position: absolute;
     background-image: url(../images/icon-arrow-slider-right.png);
     width: 32px;
     height: 55px;
     top: 30%;
-    right: -20px;
+    right: -40px;
+    font-size: 0;
+    opacity: 0.4;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
+
+.bx-viewport{
+  height: 100% !important;
+}
+.bx-pager{
+  display: none;
+}
   
   h2{
     text-align: center;

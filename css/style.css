@@ -432,6 +432,9 @@ h2 {
   font-family: 'open sans', sans-serif;
   text-transform: uppercase;
 }
+.btn:hover {
+  opacity: 0.9;
+}
 .btn:active {
   box-shadow: none;
   top: 5px;
@@ -494,7 +497,6 @@ header .row {
 .main-nav__nav-item .active {
   background-color: #b52126;
   color: #fff;
-  pointer-events: none;
   cursor: default;
 }
 .fast-contact {
@@ -614,6 +616,9 @@ header .row {
   padding-left: 15px;
   outline: none;
 }
+.main-feedback input[type=text]:focus {
+  outline: none !important;
+}
 .main-feedback fieldset {
   border: none;
   padding: 0;
@@ -651,7 +656,7 @@ header .row {
 .our-clients p {
   font-size: 18px;
   font-family: 'open sans', sans-serif;
-  line-height: 24px 24px;
+  line-height: 24px;
 }
 .our-clients {
   padding-bottom: 40px;
@@ -776,21 +781,37 @@ header .row {
 .reviews__slide {
   position: relative;
 }
-.reviews__slide .left-arrow-box {
+.reviews__slide .bx-prev {
   position: absolute;
   background-image: url(../images/icon-arrow-slider.png);
   width: 32px;
   height: 55px;
   top: 30%;
-  left: -20px;
+  left: -40px;
+  font-size: 0;
+  opacity: 0.4;
 }
-.reviews__slide .right-arrow-box {
+.reviews__slide .bx-prev:hover {
+  opacity: 1;
+}
+.reviews__slide .bx-next {
   position: absolute;
   background-image: url(../images/icon-arrow-slider-right.png);
   width: 32px;
   height: 55px;
   top: 30%;
-  right: -20px;
+  right: -40px;
+  font-size: 0;
+  opacity: 0.4;
+}
+.reviews__slide .bx-next:hover {
+  opacity: 1;
+}
+.reviews .bx-viewport {
+  height: 100% !important;
+}
+.reviews .bx-pager {
+  display: none;
 }
 .reviews h2 {
   text-align: center;

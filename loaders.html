@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
   <title>Град Персонал</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="js/jquery.maskedinput.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -60,10 +58,10 @@
             <div class="main-feedback__feedback-form">
 
               <div class="main-feedback__feedback-head">Заказать грузчиков и разнорабочих</div>
-              <form action="">
+              <form action="#">
                 <fieldset>
-                  <label for="">Оставьте ваш телефон</label>
-                  <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <label for="phone-input-main-feedback">Оставьте ваш телефон</label>
+                  <input type="text" id="phone-input-main-feedback" class="phone-input" placeholder="+7 (___) ___-__-__">
                   <input class="btn btn__slide" type="submit" value="Отправить">
                 </fieldset>
               </form>
@@ -102,7 +100,7 @@
           </div>
           <!-- /.advantages__advantages-item col-3 -->
           <div class="advantages__advantages-item col-3">
-            <img src="images/icon-letter.png"alt="">
+            <img src="images/icon-letter.png" alt="">
             <p>Снизим Ваши затраты на рабочую силу на 40%</p>
           </div>
           <!-- /.advantages__advantages-item col-3 -->
@@ -111,17 +109,17 @@
       </div>
       <!-- /.continer -->
     </div>
-    <!-- /.advantages advantages--white-->
+    <!-- /.advantages advantages-white-->
     
     <div class="fast-feedback fast-feedback--feedback-light">
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="">
+            <form action="#">
               <fieldset>
                 <p>
-                  <label for="">Оставьте ваш телефон</label>
-                  <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <label for="phone-input-feedback-one">Оставьте ваш телефон</label>
+                  <input type="text" id="phone-input-feedback-one" class="phone-input" placeholder="+7 (___) ___-__-__">
                 </p>
                 <input type="submit" value="Отправить" class="btn btn__small btn--red">
               </fieldset>
@@ -164,11 +162,11 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="">
+            <form action="#">
               <fieldset>
                 <p>
-                  <label for="">Оставьте ваш телефон</label>
-                  <input type="text"  class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <label for="phone-input-feedback-two">Оставьте ваш телефон</label>
+                  <input type="text" id="phone-input-feedback-two" class="phone-input" placeholder="+7 (___) ___-__-__">
                 </p>
                 <input type="submit" value="Отправить" class="btn btn__small btn--grey">
               </fieldset>
@@ -191,24 +189,63 @@
       <div class="container">
         <h2>Вот за что нас ценят компании (города N) и что говорят о подобранных нами бригадах грузчиков:</h2>
         <div class="reviews__slide row">
-          <div class="col-4 reviews__letter">
-            <a href="" class="reviews__letter-link">
-              <img src="images/mavis-letter.jpg" height="307" width="224" alt="" class="reviews__letter-img">
-            </a>
-          </div>
-          <!-- .col-4 reviews__letter -->
-          <div class="col-8 reviews__details">
-            <img src="images/logo-mavis.jpg" height="34" width="125" alt="" class="reviews__logo-client">
-            <h3 class="reviews__title-client">Строительная компания "Мавис строй"</h3>
-            <!-- /.reviews__title-client -->
-            <p class="reviews__review-client">«По результатам тендера компанией «Персональное решение» было предложены лучшие условия. Все необходимые подсобные работы, работы по уборке мусора были выполнены точно и с опережением срока.</p>
-            <p class="reviews__review-client">Отдельно хотелось бы отметить качественную организацию проводимых работ, а также исполнительность и ответственность как менеджерского, так и рабочего состава «Персональное решение».</p>
-            <!-- /.reviews__review-client -->
-            <cite class="reviews__signature-client"><span>Главный инженер</span> <span>Епишин А.М.</span></cite>
-          </div>
-          <!-- /.col-8 -->
-          <div class="left-arrow-box"></div>
-          <div class="right-arrow-box"></div>
+          <ul class="bxslider">
+            <li>
+              <div class="col-4 reviews__letter">
+                <a href="" class="reviews__letter-link">
+                  <img src="images/mavis-letter.jpg" height="307" width="224" alt="" class="reviews__letter-img">
+                </a>
+              </div>
+              <!-- .col-4 reviews__letter -->
+              <div class="col-8 reviews__details">
+                <img src="images/logo-mavis.jpg" height="34" width="125" alt="" class="reviews__logo-client">
+                <h3 class="reviews__title-client">Строительная компания "Мавис строй"</h3>
+                <!-- /.reviews__title-client -->
+                <p class="reviews__review-client">«По результатам тендера компанией «Персональное решение» было предложены лучшие условия. Все необходимые подсобные работы, работы по уборке мусора были выполнены точно и с опережением срока.</p>
+                <p class="reviews__review-client">Отдельно хотелось бы отметить качественную организацию проводимых работ, а также исполнительность и ответственность как менеджерского, так и рабочего состава «Персональное решение».</p>
+                <!-- /.reviews__review-client -->
+                <cite class="reviews__signature-client"><span>Главный инженер</span> <span>Епишин А.М.</span></cite>
+              </div>
+              <!-- /.col-8 -->
+            </li>
+            <li>
+              <div class="col-4 reviews__letter">
+                <a href="" class="reviews__letter-link">
+                  <img src="images/mavis-letter.jpg" height="307" width="224" alt="" class="reviews__letter-img">
+                </a>
+              </div>
+              <!-- .col-4 reviews__letter -->
+              <div class="col-8 reviews__details">
+                <img src="images/logo-mavis.jpg" height="34" width="125" alt="" class="reviews__logo-client">
+                <h3 class="reviews__title-client">Строительная компания "Мавис строй"</h3>
+                <!-- /.reviews__title-client -->
+                <p class="reviews__review-client">«По результатам тендера компанией «Персональное решение» было предложены лучшие условия. Все необходимые подсобные работы, работы по уборке мусора были выполнены точно и с опережением срока.</p>
+                <p class="reviews__review-client">Отдельно хотелось бы отметить качественную организацию проводимых работ, а также исполнительность и ответственность как менеджерского, так и рабочего состава «Персональное решение».</p>
+                <!-- /.reviews__review-client -->
+                <cite class="reviews__signature-client"><span>Главный инженер</span> <span>Епишин А.М.</span></cite>
+              </div>
+              <!-- /.col-8 -->
+            </li>
+            <li>
+              <div class="col-4 reviews__letter">
+                <a href="" class="reviews__letter-link">
+                  <img src="images/mavis-letter.jpg" height="307" width="224" alt="" class="reviews__letter-img">
+                </a>
+              </div>
+              <!-- .col-4 reviews__letter -->
+              <div class="col-8 reviews__details">
+                <img src="images/logo-mavis.jpg" height="34" width="125" alt="" class="reviews__logo-client">
+                <h3 class="reviews__title-client">Строительная компания "Мавис строй"</h3>
+                <!-- /.reviews__title-client -->
+                <p class="reviews__review-client">«По результатам тендера компанией «Персональное решение» было предложены лучшие условия. Все необходимые подсобные работы, работы по уборке мусора были выполнены точно и с опережением срока.</p>
+                <p class="reviews__review-client">Отдельно хотелось бы отметить качественную организацию проводимых работ, а также исполнительность и ответственность как менеджерского, так и рабочего состава «Персональное решение».</p>
+                <!-- /.reviews__review-client -->
+                <cite class="reviews__signature-client"><span>Главный инженер</span> <span>Епишин А.М.</span></cite>
+              </div>
+              <!-- /.col-8 -->
+            </li>
+          </ul> 
+            
         </div>
         <!-- /.reviews__slide row -->
       </div>
@@ -221,11 +258,11 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="">
+            <form action="#">
               <fieldset>
                 <p>
-                  <label for="">Оставьте ваш телефон</label>
-                  <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <label for="phone-input-feedback-three">Оставьте ваш телефон</label>
+                  <input type="text" id="phone-input-feedback-three" class="phone-input" placeholder="+7 (___) ___-__-__">
                 </p>
                 <input type="submit" value="Отправить" class="btn btn__small btn--grey">
               </fieldset>
@@ -273,17 +310,17 @@
       </div>
       <!-- /.continer -->
     </div>
-    <!-- /.advantages advantages--dark-->
+    <!-- /.advantages advantages-dark-->
 
     <div class="fast-feedback fast-feedback--feedback-light">
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="">
+            <form action="#">
               <fieldset>
                 <p>
-                  <label for="">Оставьте ваш телефон</label>
-                  <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <label for="phone-input-feedback-four">Оставьте ваш телефон</label>
+                  <input type="text" id="phone-input-feedback-four" class="phone-input" placeholder="+7 (___) ___-__-__">
                 </p>
                 <input type="submit" value="Отправить" class="btn btn__small btn--red">
               </fieldset>
@@ -308,7 +345,7 @@
     <!-- .fast-feedback -->
   
   <div class="map">
-    <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Igf8ed6Xl_D-6FthJM1E3c68VxV0FiUF&height=480"></script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Igf8ed6Xl_D-6FthJM1E3c68VxV0FiUF&height=480"></script>
   </div>
 
   </main>
@@ -322,6 +359,9 @@
     </div>
     <!-- /.container -->
   </footer>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
