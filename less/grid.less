@@ -1,0 +1,27 @@
+.row{
+  margin-left: -@indent-col/2;
+  margin-right: -@indent-col/2;
+
+  &:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    // height: 0;
+    clear: both;
+  }
+}
+
+.generate-columns(@n, @i: 1) when (@i =< @n) { 
+
+  .col-@{i} {
+  width: (@i * 100% / @n);
+  padding: 0 @indent-col/2;
+  float: left;
+  }
+  
+  .generate-columns(@n, (@i + 1));
+  }
+  
+  .generate-columns(12);
+
+}
