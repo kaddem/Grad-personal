@@ -166,8 +166,32 @@ header{
   background-position: 50% 50%;
   background-size: cover;
   color: #fff;
-  padding-top: 35px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   min-width: @min-width;
+
+  &__vacancy{
+    background-image: url(../images/bacground-top-slide-vacancy.jpg);
+    position: relative;
+    z-index: -2;
+  }
+  &__index{
+    background-image: url(../images/background-top-slide-wokers.jpg);
+    position: relative;
+    z-index: -2;
+  }
+  &__workers{
+    background-image: url(../images/background-top-slide-wokers.jpg);
+    position: relative;
+    z-index: -2;
+  }
+
+  &__man-vacancy{
+    position: absolute;
+    bottom: -40px;
+    left: 30px;
+    z-index: -1;
+  }
 
   & row{
     padding-top: 120px;
@@ -179,7 +203,7 @@ header{
     line-height: @h1-lineheight;
     font-weight: @font-weight-light;
     margin: 0;
-    padding: 0 100px 40px 100px;
+    padding: 0 50px 30px 50px;
     text-align: center;
   }
 
@@ -190,6 +214,13 @@ header{
     display: block;
     font-weight: @font-weight-light;
     margin-bottom: 53px;
+    padding-left: 50px;
+    position: relative;
+
+
+    &:last-child{
+      margin-bottom: 0;
+    }
 
     &:before{
       background-image: url(../images/icon-red-check.png);
@@ -197,11 +228,21 @@ header{
       display: inline-block;
       width: 41px;
       height: 28px;
-      position: relative;
+      position: absolute;
+      left: 0;
       -webkit-background-size: 100%;
       background-size: 100%;
       vertical-align: top;
       margin-right: 15px;
+    }
+
+    &-index{
+      margin-bottom: 30px;
+      padding-left: 0;
+
+      &:before{
+        left: -50px;
+      }
     }
 
   }
@@ -210,7 +251,6 @@ header{
 
 .main-feedback{
   margin-top: 16px;
-  margin-bottom: 16px;
 
   &__feedback-head{
     text-align: center;
@@ -279,10 +319,15 @@ header{
   padding-bottom: 100px;
   min-width: @min-width;
 
+  &__vacancy{
+    padding-top: 100px;
+  }
+
   & p{
     font-size: @advantage-paragraph-size;
     font-family: @font-family, sans-serif;
     line-height: @advantage-paragraph-line-height;
+    margin-bottom: 0;
   }
 }
 
@@ -299,7 +344,7 @@ header{
       font-size: @our-clients-size;
       font-family: @font-family, sans-serif;
       padding-bottom: 45px;
-      padding-left: 50px;
+      padding-left: 30px;
 
       &:before{
       content: '';
@@ -346,6 +391,11 @@ header{
 .fast-feedback{
   min-width: @min-width;
 
+  & .container{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   &__feedback-form{
     padding-top: 10px;
     padding-bottom: 30px;
@@ -353,9 +403,17 @@ header{
   &--feedback-red{
     background-image: url(../images/pattern-background-red.png);
     color: #fff;
+
+    & .phone__phone-number:before{
+      background-image: url(../images/icon-phone-white.png);
+    }
   }
   &--feedback-light{
     background-image: url(../images/pattern-background.png);
+
+    & .phone__phone-number:before{
+      background-image: url(../images/icon-phone.png);
+    }
   }
   & fieldset{
     margin: 0;
@@ -385,7 +443,7 @@ header{
 }
 
 .phone{
-  padding: 10px 30px 20px 30px;
+  padding: 10px 80px 20px 30px;
   text-align: right;
   &__phone-head, &__phone-number{
       font-family: @font-family, sans-serif;
@@ -401,7 +459,7 @@ header{
       line-height: @btn-font-line-height;
 
       &:before{
-      background-image: url(../images/icon-phone.png);
+      // background-image: url(../images/icon-phone.png);
       content: '';
       display: inline-block;
       width: 16px;
@@ -499,6 +557,7 @@ header{
   bottom: -380px;
   z-index: 999999;
   box-shadow: 0 0 35px 3px rgba(0,0,0,0.4);
+  color: #000;
 
   & img, &__city, &__street, &__phone, &__email{
     display: block;

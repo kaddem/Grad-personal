@@ -549,8 +549,30 @@ header .row {
   background-position: 50% 50%;
   background-size: cover;
   color: #fff;
-  padding-top: 35px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   min-width: 1180px;
+}
+.top-slide__vacancy {
+  background-image: url(../images/bacground-top-slide-vacancy.jpg);
+  position: relative;
+  z-index: -2;
+}
+.top-slide__index {
+  background-image: url(../images/background-top-slide-wokers.jpg);
+  position: relative;
+  z-index: -2;
+}
+.top-slide__workers {
+  background-image: url(../images/background-top-slide-wokers.jpg);
+  position: relative;
+  z-index: -2;
+}
+.top-slide__man-vacancy {
+  position: absolute;
+  bottom: -40px;
+  left: 30px;
+  z-index: -1;
 }
 .top-slide row {
   padding-top: 120px;
@@ -561,7 +583,7 @@ header .row {
   line-height: 44px;
   font-weight: 300;
   margin: 0;
-  padding: 0 100px 40px 100px;
+  padding: 0 50px 30px 50px;
   text-align: center;
 }
 .top-slide__advantages-item {
@@ -571,6 +593,11 @@ header .row {
   display: block;
   font-weight: 300;
   margin-bottom: 53px;
+  padding-left: 50px;
+  position: relative;
+}
+.top-slide__advantages-item:last-child {
+  margin-bottom: 0;
 }
 .top-slide__advantages-item:before {
   background-image: url(../images/icon-red-check.png);
@@ -578,14 +605,21 @@ header .row {
   display: inline-block;
   width: 41px;
   height: 28px;
-  position: relative;
+  position: absolute;
+  left: 0;
   background-size: 100%;
   vertical-align: top;
   margin-right: 15px;
 }
+.top-slide__advantages-item-index {
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+.top-slide__advantages-item-index:before {
+  left: -50px;
+}
 .main-feedback {
   margin-top: 16px;
-  margin-bottom: 16px;
 }
 .main-feedback__feedback-head {
   text-align: center;
@@ -655,11 +689,16 @@ header .row {
   padding-bottom: 100px;
   min-width: 1180px;
 }
+.advantages__vacancy,
+.our-clients__vacancy {
+  padding-top: 100px;
+}
 .advantages p,
 .our-clients p {
   font-size: 18px;
   font-family: 'open sans', sans-serif;
   line-height: 24px;
+  margin-bottom: 0;
 }
 .our-clients {
   padding-bottom: 40px;
@@ -673,7 +712,7 @@ header .row {
   font-size: 24px;
   font-family: 'open sans', sans-serif;
   padding-bottom: 45px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 .our-clients__item:before {
   content: '';
@@ -715,6 +754,10 @@ header .row {
 .fast-feedback {
   min-width: 1180px;
 }
+.fast-feedback .container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
 .fast-feedback__feedback-form {
   padding-top: 10px;
   padding-bottom: 30px;
@@ -723,8 +766,14 @@ header .row {
   background-image: url(../images/pattern-background-red.png);
   color: #fff;
 }
+.fast-feedback--feedback-red .phone__phone-number:before {
+  background-image: url(../images/icon-phone-white.png);
+}
 .fast-feedback--feedback-light {
   background-image: url(../images/pattern-background.png);
+}
+.fast-feedback--feedback-light .phone__phone-number:before {
+  background-image: url(../images/icon-phone.png);
 }
 .fast-feedback fieldset {
   margin: 0;
@@ -753,7 +802,7 @@ header .row {
   line-height: 35px;
 }
 .phone {
-  padding: 10px 30px 20px 30px;
+  padding: 10px 80px 20px 30px;
   text-align: right;
 }
 .phone__phone-head,
@@ -771,7 +820,6 @@ header .row {
   line-height: 50px;
 }
 .phone__phone-number:before {
-  background-image: url(../images/icon-phone.png);
   content: '';
   display: inline-block;
   width: 16px;
@@ -862,6 +910,7 @@ header .row {
   bottom: -380px;
   z-index: 999999;
   box-shadow: 0 0 35px 3px rgba(0, 0, 0, 0.4);
+  color: #000;
 }
 .adress-plate img,
 .adress-plate__city,
