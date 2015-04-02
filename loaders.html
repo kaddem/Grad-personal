@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-ng-app="frApp">
 <head>
   <title>Град Персонал</title>
   <meta charset="UTF-8">
@@ -58,11 +58,11 @@
             <div class="main-feedback__feedback-form">
 
               <div class="main-feedback__feedback-head">Заказать грузчиков и разнорабочих</div>
-              <form action="#">
+              <form action="customer" data-ng-controller="FormController">
                 <fieldset>
                   <label for="phone-input-main-feedback">Оставьте ваш телефон</label>
-                  <input type="text" id="phone-input-main-feedback" class="phone-input" placeholder="+7 (___) ___-__-__">
-                  <input class="btn btn__slide" type="submit" value="Отправить">
+                  <input type="text" id="phone-input-main-feedback" class="phone-input" placeholder="+7 (___) ___-__-__" data-ng-class="{error: invalid}" data-ng-model="data.telEmail">
+                  <input class="btn btn__slide" type="button" value="Отправить" data-ng-click="submit()">
                 </fieldset>
               </form>
               <div class="main-feedback__phone">
@@ -115,13 +115,13 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="#">
+            <form action="customer" data-ng-controller="FormController">
               <fieldset>
                 <p>
                   <label for="phone-input-feedback-one">Оставьте ваш телефон</label>
-                  <input type="text" id="phone-input-feedback-one" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <input type="text" id="phone-input-feedback-one" class="phone-input" placeholder="+7 (___) ___-__-__" data-ng-class="{error: invalid}" data-ng-model="data.telEmail">
                 </p>
-                <input type="submit" value="Отправить" class="btn btn__small btn--red">
+                <input type="button" value="Отправить" class="btn btn__small btn--red" data-ng-click="submit()">
               </fieldset>
             </form>
           </div>
@@ -162,13 +162,13 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="#">
+            <form action="customer" data-ng-controller="FormController">
               <fieldset>
                 <p>
                   <label for="phone-input-feedback-two">Оставьте ваш телефон</label>
-                  <input type="text" id="phone-input-feedback-two" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <input type="text" id="phone-input-feedback-two" class="phone-input" placeholder="+7 (___) ___-__-__" data-ng-class="{error: invalid}" data-ng-model="data.telEmail">
                 </p>
-                <input type="submit" value="Отправить" class="btn btn__small btn--grey">
+                <input type="button" value="Отправить" class="btn btn__small btn--grey" data-ng-click="submit()">
               </fieldset>
             </form>
           </div>
@@ -258,13 +258,13 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="#">
+            <form action="customer" data-ng-controller="FormController">
               <fieldset>
                 <p>
                   <label for="phone-input-feedback-three">Оставьте ваш телефон</label>
-                  <input type="text" id="phone-input-feedback-three" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <input type="text" id="phone-input-feedback-three" class="phone-input" placeholder="+7 (___) ___-__-__" data-ng-class="{error: invalid}" data-ng-model="data.telEmail">
                 </p>
-                <input type="submit" value="Отправить" class="btn btn__small btn--grey">
+                <input type="button" value="Отправить" class="btn btn__small btn--grey" data-ng-click="submit()">
               </fieldset>
             </form>
           </div>
@@ -316,13 +316,13 @@
       <div class="container">
         <div class="row">
           <div class="col-6 fast-feedback__feedback-form">
-            <form action="#">
+            <form action="customer" data-ng-controller="FormController">
               <fieldset>
                 <p>
                   <label for="phone-input-feedback-four">Оставьте ваш телефон</label>
-                  <input type="text" id="phone-input-feedback-four" class="phone-input" placeholder="+7 (___) ___-__-__">
+                  <input type="text" id="phone-input-feedback-four" class="phone-input" placeholder="+7 (___) ___-__-__" data-ng-class="{error: invalid}" data-ng-model="data.telEmail">
                 </p>
-                <input type="submit" value="Отправить" class="btn btn__small btn--red">
+                <input type="button" value="Отправить" class="btn btn__small btn--red" data-ng-click="submit()">
               </fieldset>
             </form>
           </div>
@@ -362,6 +362,9 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/ui-bootstrap-custom-tpls-0.12.1.min.js"></script>
+  <script src="js/frApp.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
